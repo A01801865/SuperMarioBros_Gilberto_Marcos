@@ -26,7 +26,7 @@ public class CambiaAnimacion : MonoBehaviour
         animator.SetFloat("velocidad", MathF.Abs(rb.linearVelocityX));
 
         //Manejar el FLIP_X
-        sr.flipX= rb.linearVelocityX < 0.01;
+        sr.flipX= rb.linearVelocityX < 0;
 
         //Manejar animación de salto
         animator.SetBool("enPiso", estado.estaEnPiso);

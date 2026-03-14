@@ -10,8 +10,8 @@ public class MoverConInputAction : MonoBehaviour
     private InputAction accionSaltar; //para saltar con espacio
     private float velocidadX = 7f;
     private float velocidadY = 7f;
-
     private Rigidbody2D rb; 
+    private EstadoPersonaje es;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +19,7 @@ public class MoverConInputAction : MonoBehaviour
         //Habilitar el InputAction
         accionMover.Enable();
         rb = GetComponent<Rigidbody2D>();
+        es = GetComponentInChildren<EstadoPersonaje>();
     }
      // otra forma para habilitar el InputAction
     void OnEnable()
@@ -36,8 +37,13 @@ public class MoverConInputAction : MonoBehaviour
 
     public void saltar(InputAction.CallbackContext context)
     {
-        //Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.linearVelocityY = velocidadY * 1;
+        /*Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.linearVelocityY = velocidadY * 1;*/
+
+        if (es.estaEnPiso)
+        {
+            rb.linearVelocityY = velocidadY;
+        }
     }
 
     // Update is called once per frame
