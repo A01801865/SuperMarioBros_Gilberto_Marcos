@@ -1,0 +1,11 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/MenuPrincipal.uss?fileID=7433441132597879392&amp;guid=d789d4396240de34ebea2293a86b3538&amp;type=3#MenuPrincipal"/>
+    <ui:VisualElement name="Menu" class="menu" style="flex-grow: 1; justify-content: flex-start; align-items: center; padding-top: 80px; flex-direction: column;">
+        <ui:Label text="Tarea Unity" name="Titulo" class="titulo" style="justify-content: flex-end; align-content: stretch; align-items: center; margin-bottom: 20px; background-color: rgba(95, 95, 95, 0.44); color: rgb(255, 255, 255); font-size: 89px; border-top-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-bottom-left-radius: 30px;"/>
+        <ui:VisualElement name="Botones" class="botones" style="flex-grow: 0; background-color: rgba(95, 95, 95, 0.44); align-content: center; justify-content: center; width: 1100px; height: 800px; margin-top: 30px; margin-bottom: 30px; margin-right: 20px; margin-left: 20px; border-top-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-bottom-left-radius: 30px;">
+            <ui:Button text="Jugar" name="Jugar" class="boton-juego"/>
+            <ui:Button text="Ayuda" name="Ayuda" class="boton-juego"/>
+            <ui:Button text="Créditos" name="Creditos" class="boton-juego"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
