@@ -1,3 +1,5 @@
+//Gilberto de Jesús Marcos Orozco A01801865
+
 using UnityEngine;
 
 public class EstadoPersonaje : MonoBehaviour

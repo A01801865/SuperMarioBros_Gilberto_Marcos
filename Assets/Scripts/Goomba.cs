@@ -1,40 +1,54 @@
+// Gilberto de Jesús Marcos Orozco A01801865
+
 using UnityEngine;
 
 public class Goomba : MonoBehaviour
 {
-    private Rigidbody2D rb;
-
     public float velocidad = 2f;
+    public float distanciaPatrullaje = 3f; 
+    
+    private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+    private Vector2 posicionInicial;
     private int direccion = -1; 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        
+        
+        posicionInicial = transform.position;
+
+       
+        if (rb != null) rb.freezeRotation = true;
     }
 
     void Update()
     {
+        
+        rb.linearVelocityX = velocidad * direccion;
 
-        rb.linearVelocity = new Vector2(velocidad * direccion, rb.linearVelocity.y);
+        //movimiento del Goomba
+        if (transform.position.x < posicionInicial.x - distanciaPatrullaje)
+        {
+            direccion = 1;
+            spriteRenderer.flipX = true; 
+        }
+        else if (transform.position.x > posicionInicial.x + distanciaPatrullaje)
+        {
+            direccion = -1; 
+            spriteRenderer.flipX = false; 
+        }
     }
 
-    void OnCollisionStay2D(Collision2D collision)
+//muerte del jugador si toca al goomba
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Goomba eliminó al jugador");
             Destroy(collision.gameObject);
-            return;
-        }
-
-        
-        foreach (ContactPoint2D contacto in collision.contacts)
-        {
-            if (Mathf.Abs(contacto.normal.x) > 0.5f)
-            {
-                direccion *= -1;
-                break;
-            }
         }
     }
 }
