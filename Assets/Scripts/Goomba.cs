@@ -11,13 +11,13 @@ public class Goomba : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-//movimiento goomba
+
     void Update()
     {
 
         rb.linearVelocity = new Vector2(velocidad * direccion, rb.linearVelocity.y);
     }
-//destruir al jugador al colisionar 
+
     void OnCollisionStay2D(Collision2D collision)
     {
         
@@ -27,7 +27,7 @@ public class Goomba : MonoBehaviour
             return;
         }
 
-        //dirección del goomba
+        
         foreach (ContactPoint2D contacto in collision.contacts)
         {
             if (Mathf.Abs(contacto.normal.x) > 0.5f)

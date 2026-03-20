@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
-public class MenuController : MonoBehaviour
+public class Menu : MonoBehaviour
 {
     private UIDocument _documento;
     private VisualElement _root;
@@ -13,6 +13,7 @@ public class MenuController : MonoBehaviour
     private VisualElement _listaTexto;
     private VisualElement _contenedorScroll;
 
+    [Header("Configuración Créditos")]
     public float velocidadSubida = 50f;
     private float _posicionY = 0f;
 
@@ -28,19 +29,19 @@ public class MenuController : MonoBehaviour
         _contenedorScroll = _root.Q<VisualElement>("Scroll");
         _listaTexto = _root.Q<VisualElement>("ListaTexto");
 
-        //botones
+        //botones-
         _root.Q<Button>("Jugar").clicked += () => SceneManager.LoadScene("SampleScene");
         _root.Q<Button>("Ayuda").clicked += () => AbrirSeccion(_ventanaAyuda);
         _root.Q<Button>("Creditos").clicked += () => AbrirSeccion(_ventanaCreditos);
 
-        //boton cerrar el juego
+        //cerrar el juego
         Button btnSalir = _root.Q<Button>("BotonCerrarJuego");
         if (btnSalir != null)
         {
             btnSalir.clicked += SalirDelJuego;
         }
 
-        //boton cerrar ventanas
+        //cerrar ventanas
         _root.Query<Button>("BotonCerrar").ForEach(btn => {
             btn.clicked += RegresarAlMenu;
         });
@@ -48,18 +49,19 @@ public class MenuController : MonoBehaviour
 
     void SalirDelJuego()
     {
-        Debug.Log("Saliendo del juego..."); 
-        Application.Quit(); // Cierra el juego 
+        Debug.Log("Saliendo del juego...");
+        Application.Quit();
 
         #if UNITY_EDITOR
-        // Probar que se cierra el juego apagando el play con Unity
+
+        //Para verificar que funciona en Unity
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
     }
 
     void Update()
     {
-        // Movimiento de créditos
+        //scroll de los creditos
         if (_ventanaCreditos != null && _ventanaCreditos.style.display == DisplayStyle.Flex && _listaTexto != null)
         {
             _posicionY -= velocidadSubida * Time.deltaTime;
@@ -74,7 +76,7 @@ public class MenuController : MonoBehaviour
             }
         }
     }
-//abrir ventana
+
     void AbrirSeccion(VisualElement ventana)
     {
         if (ventana != null && _contenedorBotones != null)

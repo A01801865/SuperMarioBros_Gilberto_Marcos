@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GoombaCamina
+  m_Name: GoombaCaminando
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -22,7 +22,7 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -8283504241884404996, guid: 02f9805db847a424e8d27cc333e1336f, type: 3}
-    - time: 0.5
+    - time: 0.41666666
       value: {fileID: 1494973828, guid: 02f9805db847a424e8d27cc333e1336f, type: 3}
     - time: 0.8333333
       value: {fileID: -8283504241884404996, guid: 02f9805db847a424e8d27cc333e1336f, type: 3}

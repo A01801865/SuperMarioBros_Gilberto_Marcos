@@ -11037,9 +11037,10 @@ GameObject:
   - component: {fileID: 1567290497}
   - component: {fileID: 1567290496}
   - component: {fileID: 1567290495}
-  - component: {fileID: 1567290498}
   - component: {fileID: 1567290500}
   - component: {fileID: 1567290499}
+  - component: {fileID: 1567290501}
+  - component: {fileID: 1567290502}
   m_Layer: 0
   m_Name: GoombaAnimado
   m_TagString: Untagged
@@ -11057,7 +11058,7 @@ Animator:
   m_GameObject: {fileID: 1567290494}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eea9fd124b7445643801e83316d9a272, type: 2}
+  m_Controller: {fileID: 9100000, guid: 53f603e3d6c32924a8f8e34547df6597, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -11143,19 +11144,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1567290498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567290494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1e31a60e7034f54eba01adbca5e29dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Goomba
-  velocidad: 2
 --- !u!61 &1567290499
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11229,6 +11217,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1567290501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567290494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2e6836f989a804eafce421332c9a74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Goomba
+  velocidad: 2
+--- !u!114 &1567290502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567290494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2a351608565d454a8dfb7dcbed4c259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EstadoPersonaje
 --- !u!1 &1663732645
 GameObject:
   m_ObjectHideFlags: 0
@@ -11432,7 +11445,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2131493813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ba62490c04217844989f1f0ee3ced12, type: 3}
+  m_Script: {fileID: 11500000, guid: 95e9fa0584cc06a42ace2441101910f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Regresa
 --- !u!1660057539 &9223372036854775807
