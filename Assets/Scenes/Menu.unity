@@ -434,7 +434,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8283504241884404996, guid: 02f9805db847a424e8d27cc333e1336f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -471,6 +471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1487480243}
   - component: {fileID: 1487480242}
+  - component: {fileID: 1487480244}
   m_Layer: 5
   m_Name: MenuPrincipal
   m_TagString: Untagged
@@ -516,6 +517,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1487480244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487480241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db1c86a125cf9d4aa656c1012c06768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Menu
+  velocidadSubida: 50
 --- !u!1 &1490179768
 GameObject:
   m_ObjectHideFlags: 0
